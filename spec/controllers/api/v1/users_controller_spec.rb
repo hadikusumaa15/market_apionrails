@@ -12,7 +12,6 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
 
     it "returns the information about a reporter on a hash" do
-      byebug
       user_response = JSON.parse(response.body, symbolize_names: true)
       expect(user_response[:email]).to eql @user.email
     end
@@ -24,6 +23,8 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     context "when is successfully created" do
       before(:each) do
         @user_attributes = FactoryGirl.attributes_for :user
+        byebug
+        # attribut kosong
         post :create, { user: @user_attributes }, format: :json
       end
 
