@@ -23,7 +23,6 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     context "when is successfully created" do
       before(:each) do
         @user_attributes = FactoryGirl.attributes_for :user
-        byebug
         # attribut kosong
         post :create, { user: @user_attributes }, format: :json
       end
