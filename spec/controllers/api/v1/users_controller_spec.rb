@@ -19,6 +19,8 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     it { should respond_with 200 }
   end
 
+  # post masih merah specnya,
+  # setelah course selesai kita buat ijo
   describe "POST #create" do
     context "when is successfully created" do
       before(:each) do
